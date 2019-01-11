@@ -34,6 +34,7 @@
             // 
             // gameTimer
             // 
+            this.gameTimer.Interval = 10;
             this.gameTimer.Tick += new System.EventHandler(this.gameTimer_Tick);
             // 
             // Demo
@@ -43,8 +44,10 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImage = global::BasicGameControls.Properties.Resources.WORLD;
             this.ClientSize = new System.Drawing.Size(240, 160);
+            this.DoubleBuffered = true;
             this.Name = "Demo";
             this.Text = "Pokemon Demo";
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Demo_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.ResumeLayout(false);
 
