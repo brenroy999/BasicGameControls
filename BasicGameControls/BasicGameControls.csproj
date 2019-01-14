@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Battle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Battle.Designer.cs">
+      <DependentUpon>Battle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -53,6 +59,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Battle.resx">
+      <DependentUpon>Battle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -92,6 +101,9 @@
     <None Include="Resources\idle_side_right.png" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Resources\pokemon-emerald-pro.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <None Include="Resources\walk_front_left.png" />
   </ItemGroup>
   <ItemGroup>
