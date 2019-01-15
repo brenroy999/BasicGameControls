@@ -52,9 +52,10 @@ namespace BasicGameControls
                         }
                         else
                         {
-
+                            
                         }
                     }
+                    break;
                 case Keys.Enter:
                     {
 
@@ -65,11 +66,14 @@ namespace BasicGameControls
 
         private void Battle_Paint(object sender, PaintEventArgs e)
         {
+            e.Graphics.DrawImage(Properties.Resources.battle_main_menu, 240, 48, 0, 112);
+            e.Graphics.DrawImage(Properties.Resources.grass, 240, 112, 0, 0);
+            Pen menuSele = new Pen(Color.Red);
             switch (menuLoc)
             {
                 case "FIGHT":
                     {
-
+                        e.Graphics.DrawRectangle(menuSele ,142, 120, 34, 15);
                     }
                     break;
                 case "BAG":

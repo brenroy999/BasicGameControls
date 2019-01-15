@@ -63,6 +63,26 @@ namespace BasicGameControls.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap battle_main_menu {
+            get {
+                object obj = ResourceManager.GetObject("battle_main_menu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap grass {
+            get {
+                object obj = ResourceManager.GetObject("grass", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap idle_front {
             get {
                 object obj = ResourceManager.GetObject("idle_front", resourceCulture);
@@ -96,6 +116,46 @@ namespace BasicGameControls.Properties {
         internal static System.Drawing.Bitmap idle_side_right {
             get {
                 object obj = ResourceManager.GetObject("idle_side_right", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap npc_b {
+            get {
+                object obj = ResourceManager.GetObject("npc_b", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap npc_f {
+            get {
+                object obj = ResourceManager.GetObject("npc_f", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap npc_l {
+            get {
+                object obj = ResourceManager.GetObject("npc_l", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap npc_r {
+            get {
+                object obj = ResourceManager.GetObject("npc_r", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

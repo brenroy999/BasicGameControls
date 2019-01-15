@@ -18,6 +18,7 @@ namespace BasicGameControls
 
         string direction = "down";
         string leftRight = "left";
+        string npcDirect = "down";
 
         bool idle = true;
 
@@ -29,7 +30,10 @@ namespace BasicGameControls
         Rectangle wall_top_l = new Rectangle(0, 0, 112, 32);
         Rectangle wall_top_r = new Rectangle(128, 0, 112, 32);
         Rectangle wall_bottom = new Rectangle(0, 160, 240, 16);
-
+        Rectangle npc_body = new Rectangle(113, 81, 16, 16);
+        Rectangle npc_act_updwn = new Rectangle(113, 79, 16, 18);
+        Rectangle npc_act_leftright = new Rectangle(111, 81, 18, 16);
+            
         public Demo()
         {
             InitializeComponent();
@@ -38,7 +42,12 @@ namespace BasicGameControls
 
         private void Collider()
         {
-            if (player.IntersectsWith(wall_left) | player.IntersectsWith(wall_right) | player.IntersectsWith(wall_top_l) | player.IntersectsWith(wall_top_r) | player.IntersectsWith(wall_bottom))
+            if (player.IntersectsWith(wall_left) | 
+                player.IntersectsWith(wall_right) |
+                player.IntersectsWith(wall_top_l) | 
+                player.IntersectsWith(wall_top_r) | 
+                player.IntersectsWith(wall_bottom) |
+                player.IntersectsWith(npc_body))
             {
                 switch (direction)
                 {
@@ -98,10 +107,14 @@ namespace BasicGameControls
                         break;
                     case Keys.Enter:
                         {
-                            buttonA = false;
+                            buttonA = true;
                         }
                         break;
                 }
+            }
+            else
+            {
+                buttonA = false;
             }
 
         }
@@ -182,11 +195,43 @@ namespace BasicGameControls
                     }
                 }
             }
+            if (!moving)
+            {
+                if (buttonA = true| 
+                    player.IntersectsWith(npc_act_updwn) |
+                    player.IntersectsWith(npc_act_leftright))
+                {
+                }
+            }
             Refresh();
         }
 
         private void Demo_Paint(object sender, PaintEventArgs e)
         {
+            switch (npcDirect)
+            {
+                case "down":
+                    {
+                        e.Graphics.DrawImage(Properties.Resources.npc_f, 113, 74, 14, 22);
+                    }
+                    break;
+                case "up":
+                    {
+                        e.Graphics.DrawImage(Properties.Resources.npc_b, 113, 74, 14, 22);
+                    }
+                    break;
+                case "left":
+                    {
+                        e.Graphics.DrawImage(Properties.Resources.npc_l, 113, 74, 14, 22);
+                    }
+                    break;
+                case "right":
+                    {
+                        e.Graphics.DrawImage(Properties.Resources.npc_r, 113, 74, 14, 22);
+                    }
+                    break;
+            }
+
             switch (direction)
             {
                 case "down":
@@ -259,5 +304,6 @@ namespace BasicGameControls
                     break;
             }
         }
+
     }
 }
