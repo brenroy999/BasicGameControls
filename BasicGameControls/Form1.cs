@@ -202,10 +202,12 @@ namespace BasicGameControls
                 {
                     if (buttonA == true)
                     {
+                        buttonA = false;
+                        Battle b = new Battle();
+                        b.Show();
                         if (direction == "right")
                         {
                             npcDirect = "left";
-
                         }
                         if (direction == "left")
                         {

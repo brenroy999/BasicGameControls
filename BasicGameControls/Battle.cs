@@ -64,6 +64,12 @@ namespace BasicGameControls
             }
         }
 
+
+        private void gameTimer_Tick(object sender, EventArgs e)
+        {
+
+        }
+
         private void Battle_Paint(object sender, PaintEventArgs e)
         {
             e.Graphics.DrawImage(Properties.Resources.battle_main_menu, 240, 48, 0, 112);
@@ -78,17 +84,17 @@ namespace BasicGameControls
                     break;
                 case "BAG":
                     {
-
+                        e.Graphics.DrawRectangle(menuSele, 142, 120, 34, 15);
                     }
                     break;
                 case "PKMN":
                     {
-
+                        e.Graphics.DrawRectangle(menuSele, 142, 120, 34, 15);
                     }
                     break;
                 case "RUN":
                     {
-
+                        e.Graphics.DrawRectangle(menuSele, 142, 120, 34, 15);
                     }
                     break;
             }
