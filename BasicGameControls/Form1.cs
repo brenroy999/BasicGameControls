@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading;
-using System.Threading.Tasks;   
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BasicGameControls
@@ -28,12 +28,12 @@ namespace BasicGameControls
         Rectangle wall_left = new Rectangle(0, 0, 16, 160);
         Rectangle wall_right = new Rectangle(224, 0, 16, 160);
         Rectangle wall_top_l = new Rectangle(0, 0, 112, 32);
-        Rectangle wall_top_r = new Rectangle(128, 0, 112, 32);
+        Rectangle wall_top_r = new Rectangle(129, 0, 112, 32);
         Rectangle wall_bottom = new Rectangle(0, 160, 240, 16);
         Rectangle npc_body = new Rectangle(113, 81, 16, 16);
-        Rectangle npc_act_updwn = new Rectangle(113, 79, 16, 18);
-        Rectangle npc_act_leftright = new Rectangle(111, 81, 18, 16);
-            
+        Rectangle npc_act_updwn = new Rectangle(113, 80, 16, 18);
+        Rectangle npc_act_leftright = new Rectangle(112, 81, 18, 16);
+
         public Demo()
         {
             InitializeComponent();
@@ -42,10 +42,10 @@ namespace BasicGameControls
 
         private void Collider()
         {
-            if (player.IntersectsWith(wall_left) | 
+            if (player.IntersectsWith(wall_left) |
                 player.IntersectsWith(wall_right) |
-                player.IntersectsWith(wall_top_l) | 
-                player.IntersectsWith(wall_top_r) | 
+                player.IntersectsWith(wall_top_l) |
+                player.IntersectsWith(wall_top_r) |
                 player.IntersectsWith(wall_bottom) |
                 player.IntersectsWith(npc_body))
             {
@@ -126,7 +126,7 @@ namespace BasicGameControls
                 switch (direction)
                 {
                     case "down":
-                        if ( x < 16)
+                        if (x < 16)
                         {
                             player.Y = player.Y + 1;
                             x++;
@@ -178,7 +178,7 @@ namespace BasicGameControls
                         }
                         break;
                 }
-                if (x<8)
+                if (x < 8)
                 {
                     idle = true;
                 }
@@ -195,12 +195,31 @@ namespace BasicGameControls
                     }
                 }
             }
-            if (!moving)
+            //           if (!moving)
             {
-                if (buttonA = true| 
-                    player.IntersectsWith(npc_act_updwn) |
-                    player.IntersectsWith(npc_act_leftright))
+                if (player.IntersectsWith(npc_act_updwn) |
+                player.IntersectsWith(npc_act_leftright))
                 {
+                    if (buttonA == true)
+                    {
+                        if (direction == "right")
+                        {
+                            npcDirect = "left";
+
+                        }
+                        if (direction == "left")
+                        {
+                            npcDirect = "right";
+                        }
+                        if (direction == "down")
+                        {
+                            npcDirect = "up";
+                        }
+                        if (direction == "up")
+                        {
+                            npcDirect = "down";
+                        }
+                    }
                 }
             }
             Refresh();
@@ -250,7 +269,7 @@ namespace BasicGameControls
                             e.Graphics.DrawImage(Properties.Resources.walk_front_right, player.X, player.Y - 7, 14, 22);
                         }
                     }
-                        break;
+                    break;
                 case "up":
                     if (idle)
                     {
