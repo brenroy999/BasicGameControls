@@ -145,5 +145,20 @@
   <ItemGroup>
     <None Include="Resources\npc_r.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eevee_b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eevee_f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ralts_b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ralts_f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trainer_bird.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

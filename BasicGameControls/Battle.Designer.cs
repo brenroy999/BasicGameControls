@@ -41,7 +41,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::BasicGameControls.Properties.Resources.grass;
             this.ClientSize = new System.Drawing.Size(240, 160);
+            this.DoubleBuffered = true;
             this.Name = "Battle";
             this.Text = "Battle";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Battle_Paint);

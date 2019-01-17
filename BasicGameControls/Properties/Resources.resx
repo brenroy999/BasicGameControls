@@ -1268,4 +1268,19 @@
   <data name="npc_r" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\npc_r.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="eevee_b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eevee_b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="eevee_f" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eevee_f.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ralts_b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ralts_b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ralts_f" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ralts_f.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="trainer_bird" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trainer_bird.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

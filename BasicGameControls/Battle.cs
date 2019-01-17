@@ -14,6 +14,7 @@ namespace BasicGameControls
     {
 
         string menuLoc = "FIGHT";
+        string battleState = "Intro";
 
         public Battle()
         {
@@ -56,6 +57,38 @@ namespace BasicGameControls
                         }
                     }
                     break;
+                case Keys.S:
+                    {
+                        if (menuLoc == "FIGHT")
+                        {
+                            menuLoc = "PKMN";
+                        }
+                        if (menuLoc == "BAG")
+                        {
+                            menuLoc = "RUN";
+                        }
+                        else
+                        {
+
+                        }
+                    }
+                    break;
+                case Keys.D:
+                    {
+                        if (menuLoc == "FIGHT")
+                        {
+                            menuLoc = "BAG";
+                        }
+                        if (menuLoc == "PKMN")
+                        {
+                            menuLoc = "RUN";
+                        }
+                        else
+                        {
+
+                        }
+                    }
+                    break;
                 case Keys.Enter:
                     {
 
@@ -67,37 +100,56 @@ namespace BasicGameControls
 
         private void gameTimer_Tick(object sender, EventArgs e)
         {
-
+            
         }
 
         private void Battle_Paint(object sender, PaintEventArgs e)
         {
-            e.Graphics.DrawImage(Properties.Resources.battle_main_menu, 240, 48, 0, 112);
-            e.Graphics.DrawImage(Properties.Resources.grass, 240, 112, 0, 0);
+            //            e.Graphics.DrawImage(Properties.Resources.grass, 240, 112, 0, 0);
             Pen menuSele = new Pen(Color.Red);
+
+            switch (battleState)
+            {
+                case "Intro":
+            e.Graphics.DrawImage(Properties.Resources.trainer_bird, 146, 4, 64, 64);
+                break;
+                case "PokemonOut":
+
+                    break;
+                case "Main":
+
+                    break;
+                case "FIGHT":
+                    break;
+            }
+
+            e.Graphics.DrawImage(Properties.Resources.battle_main_menu, 0, 112, 240, 48);
+
             switch (menuLoc)
             {
                 case "FIGHT":
                     {
-                        e.Graphics.DrawRectangle(menuSele ,142, 120, 34, 15);
+                        e.Graphics.DrawRectangle(menuSele ,142, 120, 46, 16);
                     }
                     break;
                 case "BAG":
                     {
-                        e.Graphics.DrawRectangle(menuSele, 142, 120, 34, 15);
+                        e.Graphics.DrawRectangle(menuSele, 188, 120, 46, 16);
                     }
                     break;
                 case "PKMN":
                     {
-                        e.Graphics.DrawRectangle(menuSele, 142, 120, 34, 15);
+                        e.Graphics.DrawRectangle(menuSele, 142, 136, 46, 16);
                     }
                     break;
                 case "RUN":
                     {
-                        e.Graphics.DrawRectangle(menuSele, 142, 120, 34, 15);
+                        e.Graphics.DrawRectangle(menuSele, 188, 136, 46, 16);
                     }
                     break;
             }
+            Refresh();
         }
     }
 }
+
