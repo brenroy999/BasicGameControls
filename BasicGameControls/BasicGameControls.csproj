@@ -101,6 +101,9 @@
     <None Include="Resources\idle_side_right.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\pokemon-emerald-pro.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Resources\walk_front_left.png" />
   </ItemGroup>
   <ItemGroup>
