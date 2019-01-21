@@ -131,9 +131,6 @@
     <None Include="Resources\WORLD.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\battle_main_menu.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\grass.png" />
   </ItemGroup>
   <ItemGroup>
@@ -177,6 +174,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\battle_intro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\battle_main_menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\select arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foe_health.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hero_health.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

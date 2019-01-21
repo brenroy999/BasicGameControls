@@ -30,23 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // gameTimer
             // 
+            this.gameTimer.Enabled = true;
             this.gameTimer.Interval = 10;
             this.gameTimer.Tick += new System.EventHandler(this.gameTimer_Tick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label1.Location = new System.Drawing.Point(89, 86);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
             // 
             // Battle
             // 
@@ -54,20 +44,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::BasicGameControls.Properties.Resources.grass;
             this.ClientSize = new System.Drawing.Size(240, 160);
-            this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.Name = "Battle";
             this.Text = "Battle";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Battle_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Battle_KeyDown);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Timer gameTimer;
-        private System.Windows.Forms.Label label1;
     }
 }
