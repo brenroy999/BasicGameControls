@@ -20,12 +20,15 @@ namespace BasicGameControls
         string redArrow = "Up";
         string battleJason = "Trainer JASON would like to battle!";
 
-        string heroMon;
-        int heroLevel = 12;
-        string foeMon;
-        int foeLevel = 12;
+        string heroMon = "RALTS";
+        int heroLevel = 9;
+        int heroHP = 80;
+        string foeMon = "EEVEE";
+        int foeLevel = 8;
+        int foeHP = 72;
 
         int throwFrame = 1;
+        int throwX = 16;
         int descLocX = 12;
         int descLocY = 122;
 
@@ -144,6 +147,23 @@ namespace BasicGameControls
 
             if (menuState == "PokemonOut")
             {
+                for (int a = 0; a < 80; a++)
+                {
+                    if (a > 20)
+                    {
+                        throwFrame = 2;
+                    }
+                    if (a > 40)
+                    {
+                        throwFrame = 3;
+                    }
+                    if (a > 60)
+                    {
+                        throwFrame = 4;
+                    }
+                    throwX--;
+                    Refresh();
+                }
                 menuState = "Main";
             }
 
@@ -159,15 +179,42 @@ namespace BasicGameControls
         {
             Pen menuSele = new Pen(Color.Red);
             SolidBrush colorDesc = new SolidBrush(Color.White);
+            SolidBrush indiColor = new SolidBrush(Color.FromArgb(255, 66, 66, 66));
             SolidBrush shadowDesc = new SolidBrush(Color.FromArgb(255, 107, 89, 115));
             Font menuDesc = new Font("Pokémon Emerald Pro", 12, FontStyle.Regular);
+            Font uiFont = new Font("ADMUI3Sm", 7, FontStyle.Regular);
+
+            switch (throwFrame)
+            {
+                case 1:
+                    {
+                        e.Graphics.DrawImage(Properties.Resources.back1, throwX, 48, 64, 64);
+                    }
+                    break;
+                case 2:
+                    {
+                        e.Graphics.DrawImage(Properties.Resources.back2, throwX, 48, 64, 64);
+                    }
+                    break;
+                case 3:
+                    {
+                        e.Graphics.DrawImage(Properties.Resources.back3, throwX, 48, 64, 64);
+                    }
+                    break;
+                case 4:
+                    {
+                        e.Graphics.DrawImage(Properties.Resources.back4, throwX, 48, 64, 64);
+                    }
+                    break;
+            }
 
             switch (menuState)
             {
                 case "Intro":
                     {
+                        gameTimer.Interval = (160);
                         e.Graphics.DrawImage(Properties.Resources.trainer_bird, 146, 4, 64, 64);
-                        e.Graphics.DrawImage(Properties.Resources.back1, 16, 48, 64, 64);
+//                        e.Graphics.DrawImage(Properties.Resources.back1, 16, 48, 64, 64);
                         e.Graphics.DrawImage(Properties.Resources.battle_intro, 0, 112, 240, 48);
                         e.Graphics.DrawString(battleJason, menuDesc, shadowDesc, descLocX + 1, descLocY + 1);
                         e.Graphics.DrawString(battleJason, menuDesc, colorDesc, descLocX, descLocY);
@@ -176,17 +223,21 @@ namespace BasicGameControls
 
                 case "PokemonOut":
                     {
-                        e.Graphics.DrawImage(Properties.Resources.battle_main_menu, 0, 112, 240, 48);
+                        e.Graphics.DrawImage(Properties.Resources.battle_intro, 0, 112, 240, 48);
                     }
                     break;
 
                 case "Main":
                     {
+
+                        gameTimer.Interval = (10);
                         e.Graphics.DrawImage(Properties.Resources.ralts_b, 24, 48, 64, 64);
                         e.Graphics.DrawImage(Properties.Resources.eevee_f, 142, 16, 64, 64);
                         e.Graphics.DrawImage(Properties.Resources.battle_main_menu, 0, 112, 240, 48);
-                        e.Graphics.DrawImage(Properties.Resources.hero_health, 128, 73, 106, 40);
-                        e.Graphics.DrawImage(Properties.Resources.foe_health, 12, 15, 100, 32);
+ //                       e.Graphics.DrawImage(Properties.Resources.battle_main_menu, 0, 112, 240, 48);
+                        e.Graphics.DrawImage(Properties.Resources.hero_ui, 128, 73, 106, 40);
+                        e.Graphics.DrawImage(Properties.Resources.foe_ui, 12, 15, 100, 32);
+                        e.Graphics.DrawString(heroLevel + "", uiFont, indiColor, 216, 78);
                     }
                     break;
 

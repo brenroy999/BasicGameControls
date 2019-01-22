@@ -163,9 +163,9 @@ namespace BasicGameControls.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap foe_health {
+        internal static System.Drawing.Bitmap foe_ui {
             get {
-                object obj = ResourceManager.GetObject("foe_health", resourceCulture);
+                object obj = ResourceManager.GetObject("foe_ui", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +183,9 @@ namespace BasicGameControls.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap hero_health {
+        internal static System.Drawing.Bitmap hero_ui {
             get {
-                object obj = ResourceManager.GetObject("hero_health", resourceCulture);
+                object obj = ResourceManager.GetObject("hero_ui", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
